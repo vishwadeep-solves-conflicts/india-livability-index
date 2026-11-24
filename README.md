@@ -4,7 +4,7 @@
 
 **Live:** https://vishwadeep-solves-conflicts.github.io/india-livability-index/
 
-![India City Livability Index](screenshot.png)
+![India City Livability Index](public/screenshot.png)
 
 ## What's in it
 
@@ -28,7 +28,36 @@ Corrections are welcome: open an issue with a source.
 
 ## Run it locally
 
-It's one HTML file with no dependencies, so just open `index.html`. The scores live in the `CITIES` table in the script.
+You need Node 20 or newer.
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
+```
+
+## Where things are
+
+```
+src/
+  data/
+    factors.ts       the 17 factors
+    cities.ts        the 1–10 ratings for each city (edit scores here)
+    personas.ts      the four personas and their default weights
+  lib/scoring.ts     scores, rankings, strengths and weak spots
+  components/        one file per section of the page
+  styles/
+    theme.css        the app's colours for each theme
+    app.css          layout and components
+  shared/            theme switcher and top bar, the same in every app
+  App.tsx            page state: active persona, weights, selected city
+```
+
+To add a city, add a row to `cities.ts`. To add a factor, add it to `factors.ts` and a rating to every city.
+
+## Deploying
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the app and publishes `dist/` to the `gh-pages` branch. GitHub Pages serves that branch, and the self-hosted server copies it.
 
 ## Licence
 

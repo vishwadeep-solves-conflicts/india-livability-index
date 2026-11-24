@@ -1,0 +1,33 @@
+/* The app's colours. Surfaces, text, lines and accent come from the shared palette
+   (shared/tokens.css); persona and chart colours have a light and a dark set. */
+:root {
+  --bg: var(--vk-bg);
+  --surface: var(--vk-surface);
+  --ink: var(--vk-text);
+  --muted: var(--vk-muted);
+  --line: var(--vk-border);
+  --accent: var(--vk-accent);
+
+  /* dark set: Midnight and Navy */
+  --heat: #3fb3a0;
+  --p-it: #8a97f0;
+  --p-family: #3cc1a8;
+  --p-retire: #e3a446;
+  --p-remote: #e07bb0;
+  --good: #5cc98a;
+  --bad: #ef7f7f;
+
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+
+[data-theme="white"] {
+  --heat: #1f7a6d;
+  --p-it: #4656c9;
+  --p-family: #13806f;
+  --p-retire: #b26f0a;
+  --p-remote: #a83f78;
+  --good: #1d7a45;
+  --bad: #b23a3a;
+}
