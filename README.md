@@ -2,7 +2,7 @@
 
 20 Indian cities rated on 17 factors and ranked for four kinds of people. Drag the weights and watch the ranking change.
 
-**Live:** LIVE_URL
+**Live:** https://vishwadeep-solves-conflicts.github.io/india-livability-index/
 
 ![India City Livability Index](screenshot.png)
 
